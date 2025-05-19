@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FixMate Checklists - Beveiligd</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #0f0;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0; padding: 0;
+    }
+    header {
+      background: #0f0;
+      color: #000;
+      padding: 1em;
+      text-align: center;
+    }
+    main {
+      max-width: 1000px;
+      margin: 1em auto;
+      padding: 1em;
+      background: #222;
+      border-radius: 10px;
+    }
+    h1, h2 {
+      margin-bottom: 0.5em;
+    }
+    ul {
+      list-style-type: '✔ ';
+      padding-left: 1.2em;
+    }
+    section {
+      margin-bottom: 2em;
+    }
+    .hidden {
+      display: none;
+    }
+    button {
+      background: #0f0;
+      color: #000;
+      border: none;
+      padding: 0.7em 1.2em;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 1em;
+    }
+    input[type="password"] {
+      padding: 0.5em;
+      font-size: 1em;
+      border-radius: 5px;
+      border: 1px solid #0f0;
+      background: #000;
+      color: #0f0;
+      width: 200px;
+    }
+    .error {
+      color: #f00;
+      margin-top: 0.5em;
+    }
+    footer {
+      text-align: center;
+      color: #666;
+      padding: 1em;
+      font-size: 0.9em;
+    }
+    a {
+      color: #0f0;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>FixMate Checklists</h1>
+    <p>Door Matteo – ik ben 14 jaar oud en help graag mensen met computerproblemen.</p>
+  </header>
+
+  <main>
+    <div id="loginDiv">
+      <p>Voer het wachtwoord in om toegang te krijgen:</p>
+      <input type="password" id="passwordInput" placeholder="Wachtwoord" />
+      <button onclick="checkPassword()">Ontgrendel</button>
+      <p class="error" id="errorMsg"></p>
+    </div>
+
+    <div id="contentDiv" class="hidden">
+      <p><a href="index.html">← Terug naar hoofdpagina</a></p>
+
+      <!-- Checklists -->
+      <section><h2>1. Trage laptop versnellen</h2><ul>
+        <li>Taakbeheer openen (Ctrl+Shift+Esc)</li>
+        <li>Overbodige programma’s sluiten</li>
+        <li>Opstartprogramma’s uitschakelen</li>
+        <li>Schijfopruiming uitvoeren</li>
+        <li>Malware scan uitvoeren</li>
+        <li>Windows en drivers bijwerken</li>
+        <li>Onnodige extensies in browser verwijderen</li>
+        <li>Overweeg SSD of RAM upgrade</li>
+      </ul></section>
+
+      <section><h2>2. Printer werkt niet</h2><ul>
+        <li>Controleer kabels en stroom</li>
+        <li>Download juiste driver</li>
+        <li>Installeer via instellingen > Apparaten</li>
+        <li>Testpagina afdrukken</li>
+        <li>Herstart printer en computer</li>
+        <li>Controleer op papierstoringen</li>
+      </ul></section>
+
+      <section><h2>3. Slechte wifi-verbinding</h2><ul>
+        <li>Router herstarten</li>
+        <li>Router centraal plaatsen</li>
+        <li>Firmware updaten</li>
+        <li>Verander wifi-kanaal</li>
+        <li>Gebruik 5GHz indien mogelijk</li>
+        <li>Gebruik wifi-versterker indien nodig</li>
+      </ul></section>
+
+      <section><h2>4. Beeldscherm werkt niet</h2><ul>
+        <li>Controleer kabels en poorten</li>
+        <li>Zet beeldscherm aan</li>
+        <li>Probeer een andere monitor of kabel</li>
+        <li>Controleer resolutie-instellingen</li>
+        <li>Start in veilige modus</li>
+      </ul></section>
+
+      <section><h2>5. Geen geluid</h2><ul>
+        <li>Check volume en mute-knop</li>
+        <li>Kijk naar juiste uitvoerapparaat</li>
+        <li>Update geluidsdriver</li>
+        <li>Herstart computer</li>
+        <li>Controleer met externe speaker of koptelefoon</li>
+      </ul></section>
+
+      <section><h2>6. Windows update mislukt</h2><ul>
+        <li>Herstart pc en probeer opnieuw</li>
+        <li>Gebruik Windows Update Troubleshooter</li>
+        <li>Voer `sfc /scannow` uit</li>
+        <li>Schijfcontrole uitvoeren</li>
+      </ul></section>
+
+      <section><h2>7. Blue screen (BSOD)</h2><ul>
+        <li>Noteer foutcode</li>
+        <li>Recent geïnstalleerde software/hardware verwijderen</li>
+        <li>Geheugen- en schijfcontrole doen</li>
+        <li>Drivers bijwerken</li>
+      </ul></section>
+
+      <section><h2>8. Virus of malware</h2><ul>
+        <li>Scan met antivirusprogramma</li>
+        <li>Malwarebytes gebruiken</li>
+        <li>Verdachte apps verwijderen</li>
+        <li>Browserextensies controleren</li>
+        <li>Opnieuw opstarten in veilige modus</li>
+      </ul></section>
+
+      <section><h2>9. Laptop laadt niet op</h2><ul>
+        <li>Controleer adapter en stekker</li>
+        <li>Andere stopcontact proberen</li>
+        <li>Controleren of batterij goed zit</li>
+        <li>Reset batterijbeheer via Apparaatbeheer</li>
+      </ul></section>
+
+      <section><h2>10. Apps crashen steeds</h2><ul>
+        <li>Update de app</li>
+        <li>App verwijderen en opnieuw installeren</li>
+        <li>Windows bijwerken</li>
+        <li>Check systeemvereisten</li>
+      </ul></section>
+
+      <section><h2>11. Browser traag of crasht</h2><ul>
+        <li>Cache legen</li>
+        <li>Extensies uitschakelen</li>
+        <li>Browser resetten</li>
+        <li>Bijwerken naar nieuwste versie</li>
+      </ul></section>
+
+      <section><h2>12. Geen internetverbinding</h2><ul>
+        <li>Wifi opnieuw verbinden</li>
+        <li>Router herstarten</li>
+        <li>Command prompt: `ipconfig /release` & `renew`</li>
+        <li>Netwerkadapter resetten</li>
+      </ul></section>
+
+      <section><h2>13. USB werkt niet</h2><ul>
+        <li>Probeer andere poort</li>
+        <li>Andere kabel of USB-stick proberen</li>
+        <li>Apparaatbeheer: USB-controllers verwijderen en opnieuw opstarten</li>
+      </ul></section>
+
+      <section><h2>14. Laptop oververhit</h2><ul>
+        <li>Gebruik op harde ondergrond</li>
+        <li>Controleer ventilatie</li>
+        <li>Reinig ventilator/openingen</li>
+        <li>Gebruik cooling pad</li>
+      </ul></section>
+
+      <section><h2>15. Geen toegang tot bestanden</h2><ul>
+        <li>Eigenaarschap overnemen (eigenschappen > beveiliging)</li>
+        <li>Toegang verlenen aan je account</li>
+        <li>Bestandsrechten herstellen</li>
+      </ul></section>
+
+      <section><h2>16. Scherm draait niet</h2><ul>
+        <li>Ctrl + Alt + pijltoets proberen</li>
+        <li>Beeldscherminstellingen aanpassen</li>
+      </ul></section>
+
+      <section><h2>17. Bluetooth werkt niet</h2><ul>
+        <li>Bluetooth inschakelen</li>
+        <li>Driver controleren</li>
+        <li>Apparaat opnieuw koppelen</li>
+      </ul></section>
+
+      <section><h2>18. Webcam werkt niet</h2><ul>
+        <li>Camera toegang geven in instellingen</li>
+        <li>Controleer of andere apps de camera gebruiken</li>
+        <li>Driver bijwerken</li>
+      </ul></section>
+    </div>
+  </main>
+
+  <footer>
+    <p>FixMate &copy; 2025 – gemaakt door Matteo (14 jaar) | <a href="index.html">Terug naar home</a></p>
+  </footer>
+
+  <script>
+    const password = "Ymduq";
+
+    function checkPassword() {
+      const input = document.getElementById('passwordInput').value;
+      const errorMsg = document.getElementById('errorMsg');
+      if (input === password) {
+        document.getElementById('loginDiv').classList.add('hidden');
+        document.getElementById('contentDiv').classList.remove('hidden');
+      } else {
+        errorMsg.textContent = "Fout wachtwoord, probeer opnieuw.";
+      }
+    }
+
+    document.getElementById('passwordInput').addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') {
+        checkPassword();
+      }
+    });
+
+    // Beveiliging tegen rechtsklikken
+    document.addEventListener('contextmenu', (event) => event.preventDefault());
+
+    // Beveiliging tegen inspectietools
+    document.addEventListener('keydown', function(event) {
+      if (
+        event.key === 'F12' ||
+        (event.ctrlKey && event.shiftKey && event.key.toLowerCase() === 'i') ||
+        (event.ctrlKey && event.key.toLowerCase() === 'u')
+      ) {
+        event.preventDefault();
+        alert("Deze actie is uitgeschakeld!");
+      }
+    });
+  </script>
+</body>
+</html>
