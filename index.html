@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FixMate - Technische Hulp aan Huis</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #0f0;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #0f0;
+      color: #000;
+      padding: 1em;
+      text-align: center;
+    }
+    nav {
+      text-align: center;
+      background: #000;
+      padding: 0.5em;
+    }
+    nav a {
+      color: #0f0;
+      margin: 0 1em;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #8f8;
+    }
+    main {
+      padding: 2em;
+      max-width: 800px;
+      margin: auto;
+    }
+    section {
+      margin-bottom: 2em;
+    }
+    h1, h2 {
+      margin-bottom: 0.5em;
+    }
+    ul {
+      list-style-type: '✔ ';
+      padding-left: 1.2em;
+    }
+    .card {
+      background: #222;
+      padding: 1em;
+      margin-bottom: 1em;
+      border-radius: 10px;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 0.5em;
+      margin-top: 0.5em;
+      margin-bottom: 1em;
+      background: #000;
+      color: #0f0;
+      border: 1px solid #0f0;
+      border-radius: 5px;
+    }
+    form button {
+      background: #0f0;
+      color: #000;
+      border: none;
+      padding: 0.8em;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    form button:hover {
+      box-shadow: 0 0 10px #0f0;
+    }
+    footer {
+      background: #0f0;
+      color: #000;
+      text-align: center;
+      padding: 1em;
+      margin-top: 3em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>FixMate</h1>
+    <p>Jouw persoonlijke tech-held in de buurt van Stekene!</p>
+  </header>
+
+  <nav>
+    <a href="#diensten">Diensten</a>
+    <a href="#prijzen">Prijzen</a>
+    <a href="#contact">Contact</a>
+    <a href="tips.html">Tips & Tricks</a>
+  </nav>
+
+  <main>
+    <section id="diensten">
+      <h2>Diensten</h2>
+      <ul>
+        <li>Trage laptop versnellen</li>
+        <li>Printer installeren</li>
+        <li>Wifi verbeteren</li>
+        <li>Software installeren</li>
+        <li>Accountproblemen oplossen</li>
+      </ul>
+    </section>
+
+    <section id="prijzen">
+      <h2>Prijslijst</h2>
+      <div class="card">💻 Kleine hulp (15-30 min): <strong>€5</strong></div>
+      <div class="card">🔧 Middelgrote hulp (30-60 min): <strong>€10</strong></div>
+      <div class="card">📦 Volledige installatie of opschoning: <strong>€15</strong></div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Stuur me een bericht met jouw probleem:</p>
+      <form action="https://formsubmit.co/matteogoossens@tuta.io" method="POST">
+        <input type="text" name="Naam" placeholder="Jouw naam" required />
+        <input type="email" name="Email" placeholder="Jouw e-mailadres" required />
+        <textarea name="Bericht" rows="4" placeholder="Beschrijf je probleem..." required></textarea>
+        <button type="submit">Verstuur</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 FixMate | Gemaakt door Matteo
+  </footer>
+</body>
+</html>
